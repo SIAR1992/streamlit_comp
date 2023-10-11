@@ -1,0 +1,10 @@
+PyYAML
+pandas
+PyYAML
+setuptools
+numpy
+matplotlib
+sphinx
+cerberus
+streamlit
+scikit-learn
