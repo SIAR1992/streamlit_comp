@@ -1,5 +1,6 @@
 import streamlit as st
-from sklearn.linear_model import LinearRegression
+import sklearn as skl
+# from sklearn.linear_model import LinearRegression
 import sqlite3
 import re
 import matplotlib.pyplot as plt
@@ -42,7 +43,7 @@ def price_function(x,y, cap):
     x_1 = np.array(x).reshape(-1, 1)
     y_1 = np.array(y)
     # Create a Linear Regression model
-    model = LinearRegression()
+    model = skl.linear_model.LinearRegression()
     # Fit the model to the data
     model.fit(x_1, y_1)
 
