@@ -67,13 +67,13 @@ def ChangeWidgetFontSize(wgt_txt, wch_font_size = '12px'):
     htmlstr = htmlstr.replace('|wgt_txt|', "'" + wgt_txt + "'")
     components.html(f"{htmlstr}", height=0, width=0)
 
-#st.markdown(
-#    """<style>
-#div[class*="stSlider"] > label > div[data-testid="stMarkdownContainer"] > p {
-#    font-size: 24px;
-#}
-#    </style>
-#    """, unsafe_allow_html=True)
+st.markdown(
+    """<style>
+div[class*="stSlider"] > label > div[data-testid="stMarkdownContainer"] > p {
+    font-size: 20px;
+}
+    </style>
+    """, unsafe_allow_html=True)
 
 
 vp = st.slider("Varmepumpe", min_value=0.0, max_value=4.0, step=0.25)
