@@ -1,6 +1,7 @@
 import streamlit as st
 from sklearn.linear_model import LinearRegression
-import sqlite3
+import streamlit.components.v1 as components
+# import sqlite3
 import re
 import matplotlib.pyplot as plt
 import numpy as np
@@ -20,9 +21,9 @@ hide_streamlit_style = """
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
-
-
-
+st.header('Investeringsspil for Varmestrup', divider='grey')
+st.write("Vælg kapaciteter/størrelser i sliders og omkostningen for det enkelte anlæg vil komme op. Scrol igennem og fyldt ud til investeringsloftet er nået. "
+         "Husk du maks bruge for 30 mio. DKK, og husk at skrive navn og email, og klik send")
 # streamlit run "c:/Users/sba/OneDrive - EMD International A S/energygame - Jonathan Refsgaards filer/main_local.py"
 # streamlit run "c/Users/sba/Documents/Git_repo/ta_energypro/examples/competition_landsmoede/streamlit_setup.py"
 # streamlit run "c:/Users/sba/Documents/Git_repo/ta_energypro/examples/competition_landsmoede/streamlit_setup.py"
@@ -57,7 +58,22 @@ def price_function(x,y, cap):
 
     return price
 
+def ChangeWidgetFontSize(wgt_txt, wch_font_size = '12px'):
+    htmlstr = """<script>var elements = window.parent.document.querySelectorAll('p'), i;
+                for (i = 0; i < elements.length; ++i) 
+                    { if (elements[i].textContent.includes(|wgt_txt|)) 
+                        { elements[i].style.fontSize ='""" + wch_font_size + """'; } }</script>  """
 
+    htmlstr = htmlstr.replace('|wgt_txt|', "'" + wgt_txt + "'")
+    components.html(f"{htmlstr}", height=0, width=0)
+
+st.markdown(
+    """<style>
+div[class*="stSlider"] > label > div[data-testid="stMarkdownContainer"] > p {
+    font-size: 24px;
+}
+    </style>
+    """, unsafe_allow_html=True)
 
 
 vp = st.slider("Varmepumpe", min_value=0.0, max_value=4.0, step=0.25)
