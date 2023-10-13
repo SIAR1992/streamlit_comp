@@ -70,13 +70,13 @@ def ChangeWidgetFontSize(wgt_txt, wch_font_size = '12px'):
 st.markdown(
     """<style>
 div[class*="stSlider"] > label > div[data-testid="stMarkdownContainer"] > p {
-    font-size: 20px;
+    font-size: 24px;
 }
     </style>
     """, unsafe_allow_html=True)
 
 
-vp = st.slider("Varmepumpe", min_value=0.0, max_value=4.0, step=0.25)
+vp = st.slider("Varmepumpe (MW-varme)", min_value=0.0, max_value=4.0, step=0.25)
 
 # Create the price curve of the unit
 x_vppricecurve = [0.5, 1, 1.5, 2, 2.5, 3]  # heat effect (MW)
@@ -116,7 +116,7 @@ if show_section_vp:
     # Display the Matplotlib plot as an image with specified dimensions
     st.image(buffer, width=1000)
 
-ek = st.slider("Elkedel", min_value=0.0, max_value=10.0, step=0.25)
+ek = st.slider("Elkedel (MW-varme)", min_value=0.0, max_value=10.0, step=0.25)
 
 
 # Create the price curve of the unit
@@ -158,7 +158,7 @@ if show_section_elb:
     st.image(buffer, width=1000)
 
 
-ak = st.slider("Varmeakkumuleringstank", min_value=0.0, max_value=10000.0, step=50.0)
+ak = st.slider("Varmeakkumuleringstank (m3)", min_value=0.0, max_value=10000.0, step=50.0)
 
 # Create the price curve of the unit
 x_akpricecurve = [500, 1000, 1500, 2000, 2500, 3000, 3500, 4000]            # Storage capacity (m3)
@@ -200,7 +200,7 @@ if show_section_vak:
     st.image(buffer, width=1000)
 
 
-fk = st.slider("Fliskedel", min_value=0.0, max_value=10.0, step=0.5)
+fk = st.slider("Fliskedel (MW-varme)", min_value=0.0, max_value=10.0, step=0.5)
 
 # Create the price curve of the unit
 x_fkpricecurve = [0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5]                                          # Heat effect (MW)
@@ -240,7 +240,7 @@ if show_section_fk:
     st.image(buffer, width=1000)
 
 
-so = st.slider("Solvarmeanlæg areal", min_value=0.0, max_value=25000.0, step=500.0)
+so = st.slider("Solvarmeanlæg areal (m2)", min_value=0.0, max_value=25000.0, step=500.0)
 
 # Create the price curve of the unit
 x_sopricecurve = [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000]                              # Solar collector area (m2)
