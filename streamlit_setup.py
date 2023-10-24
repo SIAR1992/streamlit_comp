@@ -362,7 +362,8 @@ else:
                     # Skriv data
 
                     input_data = {'navn': navn, 'email': email, 'varmepumpe': vp, 'elkedel': ek, 'akku': ak,
-                                 'flis': fk, 'sol': so}
+                                 'flis': fk, 'sol': so, 'varmepumpe_inv': vp_price, 'elkedel_inv': ek_price, 'akku_inv': ak_price,
+                                 'flis_inv': fk_price, 'sol_inv': so_price}
 
                     response = requests.post('https://www3.emd.dk/admin/simon/', data=json.dumps(input_data))
                     if response.status_code == 200:
