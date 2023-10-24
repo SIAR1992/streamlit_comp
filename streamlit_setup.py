@@ -1,6 +1,7 @@
 import streamlit as st
 from sklearn.linear_model import LinearRegression
 import streamlit.components.v1 as components
+from streamlit_option_menu import option_menu
 # import sqlite3
 import re
 import matplotlib.pyplot as plt
@@ -74,6 +75,15 @@ div[class*="stSlider"] > label > div[data-testid="stMarkdownContainer"] > p {
 }
     </style>
     """, unsafe_allow_html=True)
+
+
+selected = option_menu(None,
+                       ["Opsætning", "Prognoser", "Varmeplan", "Budgivning"],
+                       icons=["sliders", "graph-up-arrow", "reception-3", "bar-chart-steps"],
+                       menu_icon="cast", default_index=0, orientation="horizontal",
+                       styles={
+                           "nav-link-selected": {"font-weight": "normal"}
+                       })
 
 
 vp = st.slider("Varmepumpe, kapacitet (MW-varme)", min_value=0.0, max_value=4.0, step=0.25)
