@@ -404,7 +404,7 @@ if selected == "Flere forudsætninger":
     current_date = datetime.now()
 
     if current_date < fredag_dato:
-       st.write("elpriser, gaspriser og emissionsfaktorer for modellen er valgt særligt for året 2021-2022")
+        st.write("elpriser, gaspriser og emissionsfaktorer for modellen er valgt særligt for året 2021-2022")
         st.write("Elprisen for årene 2020-2021, 2021-2022 og 2022-2023. Som skrevet benyttes 2021-2022:")
         # Display  image with specified dimensions
         image = Image.open("./pictures_streamlit/elpriser.png")
@@ -418,7 +418,7 @@ if selected == "Flere forudsætninger":
         image = Image.open("./pictures_streamlit/CO2faktorel.png")
         st.image(image, width=750)
     else:
-       st.write("elpriser, gaspriser og emissionsfaktorer for modellen er valgt særligt for året 2021-2022")
+        st.write("elpriser, gaspriser og emissionsfaktorer for modellen er valgt særligt for året 2021-2022")
         st.write("Elprisen for årene 2020-2021, 2021-2022 og 2022-2023. Som skrevet benyttes 2020-2021:")
         # Display  image with specified dimensions
         image = Image.open("./pictures_streamlit/elpriser.png")
