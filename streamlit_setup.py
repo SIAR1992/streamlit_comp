@@ -26,8 +26,9 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 st.header('Investeringsspil for Varmestrup', divider='grey')
 
-st.write("Vælg kapaciteter/størrelser i sliders og omkostningen for det enkelte anlæg vil komme op. Scrol igennem og fyldt ud til investeringsloftet er nået. "
-         "Husk du maks bruge for 30 mio. DKK, og husk at skrive navn og email, og klik send")
+st.write("Vælg kapaciteter/størrelser i sliders og omkostningen for det enkelte anlæg vil komme op. Scrol igennem og fyldt ud til investeringsloftet er nået.")
+st.write("Husk du maks bruge for 30 mio. DKK, og husk at skrive navn og email, og klik send")
+
 # streamlit run "c:/Users/sba/OneDrive - EMD International A S/energygame - Jonathan Refsgaards filer/main_local.py"
 # streamlit run "c/Users/sba/Documents/Git_repo/ta_energypro/examples/competition_landsmoede/streamlit_setup.py"
 # streamlit run "c:/Users/sba/Documents/Git_repo/ta_energypro/examples/competition_landsmoede/streamlit_setup.py"
