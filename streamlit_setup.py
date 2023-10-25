@@ -26,8 +26,8 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 st.header('Investeringsspil for Varmestrup', divider='grey')
 
-st.write("Vælg kapaciteter/størrelser i sliders og omkostningen for det enkelte anlæg vil komme op. Scrol igennem og fyldt ud til investeringsloftet er nået.")
-st.write("Husk du maks bruge for 30 mio. DKK, og husk at skrive navn og email, og klik send")
+st.write("Vælg kapaciteter/størrelser i sliders og omkostningen for det enkelte anlæg vil komme op. Scroll igennem og fyldt ud til investeringsloftet er nået.")
+st.write("Husk du maks må bruge for 30 mio. DKK, og husk at skrive navn og email, og klik send")
 
 # streamlit run "c:/Users/sba/OneDrive - EMD International A S/energygame - Jonathan Refsgaards filer/main_local.py"
 # streamlit run "c/Users/sba/Documents/Git_repo/ta_energypro/examples/competition_landsmoede/streamlit_setup.py"
@@ -404,28 +404,30 @@ if selected == "Flere forudsætninger":
     current_date = datetime.now()
 
     if current_date < fredag_dato:
-        st.write("Af forudsætninger er der blevet brugt følgende for elprisen (2021-2022):")
+       st.write("elpriser, gaspriser og emissionsfaktorer for modellen er valgt særligt for året 2021-2022")
+        st.write("Elprisen for årene 2020-2021, 2021-2022 og 2022-2023. Som skrevet benyttes 2021-2022:")
         # Display  image with specified dimensions
         image = Image.open("./pictures_streamlit/elpriser.png")
         st.image(image)
-        st.write("for gasprisen  (2021-2022):")
+        st.write("Gasprisen for årene 2020-2021, 2021-2022 og 2022-2023. Som skrevet benyttes 2021-2022:")
         # Display  image with specified dimensions
         image = Image.open("./pictures_streamlit/Gaspriser.png")
         st.image(image)
-        st.write("for CO2 emissionsfaktor for elforbrug (2021-2022):")
+        st.write("CO2 emissionsfaktor for elforbrug for årene 2020-2021, 2021-2022 og 2022-2023. Som skrevet benyttes 2021-2022:")
         # Display  image with specified dimensions
         image = Image.open("./pictures_streamlit/CO2faktorel.png")
         st.image(image, width=750)
     else:
-        st.write("Af forudsætninger er der blevet brugt følgende for elprisen (2020-2021):")
+       st.write("elpriser, gaspriser og emissionsfaktorer for modellen er valgt særligt for året 2021-2022")
+        st.write("Elprisen for årene 2020-2021, 2021-2022 og 2022-2023. Som skrevet benyttes 2020-2021:")
         # Display  image with specified dimensions
         image = Image.open("./pictures_streamlit/elpriser.png")
         st.image(image)
-        st.write("for gasprisen (2020-2021):")
+        st.write("Gasprisen for årene 2020-2021, 2021-2022 og 2022-2023. Som skrevet benyttes 2020-2021:")
         # Display  image with specified dimensions
         image = Image.open("./pictures_streamlit/Gaspriser.png")
         st.image(image)
-        st.write("for CO2 emissionsfaktor for elforbrug (2020-2021):")
+        st.write("CO2 emissionsfaktor for elforbrug for årene 2020-2021, 2021-2022 og 2022-2023. Som skrevet benyttes 2020-2021:")
         # Display  image with specified dimensions
         image = Image.open("./pictures_streamlit/CO2faktorel.png")
         st.image(image, width=750)
