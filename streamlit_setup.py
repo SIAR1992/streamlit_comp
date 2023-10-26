@@ -89,7 +89,7 @@ selected = option_menu(None,
                        })
 
 if selected == "Konkurrence":
-    vp = st.slider("Varmepumpe, kapacitet (MW-varme)", min_value=0.0, max_value=4.0, step=0.25)
+    vp = st.slider("Varmepumpe, kapacitet (MW-varme)", min_value=0.0, max_value=4.0, step=0.10)
 
     # Create the price curve of the unit
     x_vppricecurve = [0.5, 1, 1.5, 2, 2.5, 3]  # heat effect (MW)
@@ -129,7 +129,7 @@ if selected == "Konkurrence":
         # Display the Matplotlib plot as an image with specified dimensions
         st.image(buffer, width=1000)
 
-    ek = st.slider("Elkedel, kapacitet (MW-varme)", min_value=0.0, max_value=10.0, step=0.25)
+    ek = st.slider("Elkedel, kapacitet (MW-varme)", min_value=0.0, max_value=10.0, step=0.10)
 
 
     # Create the price curve of the unit
@@ -171,7 +171,7 @@ if selected == "Konkurrence":
         st.image(buffer, width=1000)
 
 
-    ak = st.slider("Varmeakkumuleringstank, kapacitet (m3)", min_value=0.0, max_value=10000.0, step=50.0)
+    ak = st.slider("Varmeakkumuleringstank, kapacitet (m3)", min_value=0.0, max_value=20000.0, step=50.0)
 
     # Create the price curve of the unit
     x_akpricecurve = [500, 1000, 1500, 2000, 2500, 3000, 3500, 4000]            # Storage capacity (m3)
@@ -213,7 +213,7 @@ if selected == "Konkurrence":
         st.image(buffer, width=1000)
 
 
-    fk = st.slider("Fliskedel, kapacitet (MW-varme)", min_value=0.0, max_value=10.0, step=0.5)
+    fk = st.slider("Fliskedel, kapacitet (MW-varme)", min_value=0.0, max_value=10.0, step=0.10)
 
     # Create the price curve of the unit
     x_fkpricecurve = [0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5]                                          # Heat effect (MW)
@@ -253,7 +253,7 @@ if selected == "Konkurrence":
         st.image(buffer, width=1000)
 
 
-    so = st.slider("Solvarmeanlæg, areal (m2)", min_value=0.0, max_value=25000.0, step=500.0)
+    so = st.slider("Solvarmeanlæg, areal (m2)", min_value=0.0, max_value=30000.0, step=250.0)
 
     # Create the price curve of the unit
     x_sopricecurve = [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000]                              # Solar collector area (m2)
