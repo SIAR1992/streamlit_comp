@@ -96,7 +96,7 @@ if selected == "Konkurrence":
     y_vppricecurve = [4.6, 6.7, 8.8, 10.8, 12.9, 14.9]  # prices (mio. DKK)
 
     # Calculate the price of the unit
-    vp_price = round(price_function(x_vppricecurve, y_vppricecurve, vp)/1.95, 1)
+    vp_price = round(price_function(x_vppricecurve, y_vppricecurve, vp)5, 1)
     # Shown calculated price
     st.write("Samlet pris Varmepumpe: "+str(vp_price) + " mio. DKK")
 
