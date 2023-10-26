@@ -180,7 +180,7 @@ if selected == "Konkurrence":
     # Calculate the price of the unit
     ak_price = round(price_function(x_akpricecurve, y_akpricecurve, ak),1)
 
-    ak_MWh = ak * 46.35/1000        
+    ak_MWh = round(ak * 46.35/1000,2)        
     st.write("Valgte størrelse svarer til: "+ str(ak_MWh) + " MWh")        
     st.write("Samlet pris VAK: "+str(ak_price) + " mio. DKK")
 
