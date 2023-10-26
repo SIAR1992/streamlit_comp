@@ -93,7 +93,7 @@ if selected == "Konkurrence":
 
     # Create the price curve of the unit
     x_vppricecurve = [0.5, 1, 1.5, 2, 2.5, 3]  # heat effect (MW)
-    y_vppricecurve = [9, 13, 17, 21, 25, 29]  # prices (mio. DKK)
+    y_vppricecurve = [4.6, 6.7, 8.8, 10.8, 12.9, 14.9]  # prices (mio. DKK)
 
     # Calculate the price of the unit
     vp_price = round(price_function(x_vppricecurve, y_vppricecurve, vp)/1.95, 1)
