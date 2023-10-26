@@ -171,7 +171,7 @@ if selected == "Konkurrence":
         st.image(buffer, width=1000)
 
 
-    ak = st.slider("Varmeakkumuleringstank, kapacitet (m3)", min_value=0.0, max_value=20000.0, step=50.0)
+    ak = st.slider("Varmeakkumuleringstank, kapacitet (m3)", min_value=0.0, max_value=35000.0, step=50.0)
 
     # Create the price curve of the unit
     x_akpricecurve = [500, 1000, 1500, 2000, 2500, 3000, 3500, 4000]            # Storage capacity (m3)
