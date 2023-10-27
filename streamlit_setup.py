@@ -219,7 +219,7 @@ if selected == "Konkurrence":
 
     # Create the price curve of the unit
     x_fkpricecurve = [0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5]                                          # Heat effect (MW)
-    y_fkpricecurve = [5.25, 8, 10.75, 13.5, 16.25, 19, 21.75, 24.5, 27.25]                      # prices (mio. DKK)
+    y_fkpricecurve = [3.7, 5.7, 7.7, 9.6, 11.6, 13.5, 15.5, 17.5, 19.4]  # prices (mio. DKK)
 
     # Calculate the price of the unit
     fk_price = round(price_function(x_fkpricecurve, y_fkpricecurve, fk),1)
